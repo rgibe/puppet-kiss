@@ -30,6 +30,6 @@ apache_instances:
 tomcat_instances:
   'test1':
     port: '8001'
-    java_home: '/usr/lib/jvm/jre-1.8.0-openjdk'
+    java_home: '/usr/lib/jvm/jre-1.8.0-openjdk' # e.g. with CentOS
 ~~~
 
