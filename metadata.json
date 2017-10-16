@@ -1,0 +1,21 @@
+{
+  "name": "puppet-kiss",
+  "version": "0.1.0",
+  "author": "R. Gibellini",
+  "summary": "Puppet module to create a service with Apache and Tomcat",
+  "license": "Apache 2.0",
+  "source": "https://gitlab.cineca.it/rgibelli/puppet-kiss",
+  "project_page": "https://gitlab.cineca.it/rgibelli/puppet-kiss",
+  "issues_url": "https://gitlab.cineca.it/rgibelli/puppet-kiss",
+  "dependencies": [
+    {"name":"puppetlabs-apache"},
+    {"name":"puppetlabs-tomcat"},
+    {"name":"yo61-logrotate"}
+  ],
+  "operatingsystem_support": [
+    { "operatingsystem": "Debian" },
+    { "operatingsystem": "CentOs" },
+    { "operatingsystem": "Ubuntu" }
+  ]
+}
+

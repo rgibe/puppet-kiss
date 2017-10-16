@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# App Specific OPTS
+export CATALINA_OPTS="$CATALINA_OPTS \
+                  -Dfile.encoding=UTF-8 \
+		  -Djava.awt.headless=true \
+		  -server \
+		  -XX:+HeapDumpOnOutOfMemoryError \
+		  -XX:HeapDumpPath=/production/products/tomcat7/memdump/dump_<%= @service_name %>.hprof"
