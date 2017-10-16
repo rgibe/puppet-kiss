@@ -1,6 +1,6 @@
-# == Class: puppet-kiss
+# == Class: kiss
 
-class puppet-kiss () inherits puppet-kiss::params {
+class kiss () inherits kiss::params {
 
   # Supported OS
   ##############
@@ -18,10 +18,10 @@ class puppet-kiss () inherits puppet-kiss::params {
     default_vhost => false,
   }
 
-  contain puppet-kiss::install
-  contain puppet-kiss::config
+  contain kiss::install
+  contain kiss::config
 
-  Class['::puppet-kiss::install']
-  -> Class['::puppet-kiss::config']
+  Class['::kiss::install']
+  -> Class['::kiss::config']
 
 }

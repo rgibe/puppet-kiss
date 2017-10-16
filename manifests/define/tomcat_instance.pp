@@ -1,4 +1,4 @@
-define puppet-kiss::define::tomcat_instance (
+define kiss::define::tomcat_instance (
   $port = 8001,
   $jvm = 'jvm1a',
   $java_home = '/usr/lib/jvm/jdk1.8.0_131',
@@ -20,22 +20,22 @@ define puppet-kiss::define::tomcat_instance (
 
   file { 
     "/etc/systemd/system/${service_name}.service": # for RH
-      content => template('puppet-kiss/systemd-tomcat.erb'),
+      content => template('kiss/systemd-tomcat.erb'),
       owner   => root,
       group   => root,
       mode => '0644';
     "${catalina_base}/bin/setenv.sh":
-      content => template('puppet-kiss/setenv.erb'),
+      content => template('kiss/setenv.erb'),
       owner => $instance_owner,
       group => $instance_group,
       mode => '0744';
     "${catalina_base}/bin/appenv.sh":
-      content => template('puppet-kiss/appenv.erb'),
+      content => template('kiss/appenv.erb'),
       owner => $instance_owner,
       group => $instance_group,
       mode => '0744';
     "${catalina_base}/webapps/hello.war":
-      source => 'puppet:///modules/puppet-kiss/hello.war',
+      source => 'puppet:///modules/kiss/hello.war',
       owner => $instance_owner,
       group => $instance_group;
   }

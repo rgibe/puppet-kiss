@@ -1,4 +1,4 @@
-class puppet-kiss::apache inherits puppet-kiss {
+class kiss::apache inherits kiss {
 
   #notify { "Apache Name: $apache_name": }
   apache::mod { 'headers': }
@@ -22,7 +22,7 @@ class puppet-kiss::apache inherits puppet-kiss {
   # Create Apache2 Instances
   $apache_instances = lookup('apache_instances')
   if !empty($apache_instances) {
-    create_resources('puppet-kiss::define::apache_instance', $apache_instances)
+    create_resources('kiss::define::apache_instance', $apache_instances)
   }
 
 }

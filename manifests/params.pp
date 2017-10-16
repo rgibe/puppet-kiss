@@ -1,4 +1,4 @@
-class puppet-kiss::params {
+class kiss::params {
 
   if $::osfamily == 'RedHat' {
     $apache_name = 'httpd'

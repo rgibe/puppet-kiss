@@ -1,4 +1,4 @@
-class puppet-kiss::tomcat inherits puppet-kiss {
+class kiss::tomcat inherits kiss {
 
   tomcat::install { 'default':
     source_url => 'http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.81/bin/apache-tomcat-7.0.81.tar.gz',
@@ -19,7 +19,7 @@ class puppet-kiss::tomcat inherits puppet-kiss {
   # Create Tomcat Instances
   $tomcat_instances = lookup('tomcat_instances')
   if !empty($tomcat_instances) {
-    create_resources('puppet-kiss::define::tomcat_instance', $tomcat_instances)
+    create_resources('kiss::define::tomcat_instance', $tomcat_instances)
   }
 
 }

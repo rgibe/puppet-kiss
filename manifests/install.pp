@@ -1,4 +1,4 @@
-class puppet-kiss::install inherits puppet-kiss {
+class kiss::install inherits kiss {
 
   # OS Family Case
   ################

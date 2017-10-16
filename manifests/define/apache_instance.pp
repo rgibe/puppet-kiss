@@ -1,10 +1,10 @@
-define puppet-kiss::define::apache_instance (
+define kiss::define::apache_instance (
   $ajp_port = '8011',
 ) {
 
   # Variables
-  #notify { "Scope Apache Name: $puppet-kiss::apache_name": }
-  $_apache_name = "$puppet-kiss::apache_name"
+  #notify { "Scope Apache Name: $kiss::apache_name": }
+  $_apache_name = "$kiss::apache_name"
   $docroot = '/production/htdocs'
 
   # Self Signed SSL CERT

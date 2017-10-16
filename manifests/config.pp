@@ -1,4 +1,4 @@
-class puppet-kiss::config inherits puppet-kiss {
+class kiss::config inherits kiss {
 
   file { 
     ['/production',
@@ -9,8 +9,8 @@ class puppet-kiss::config inherits puppet-kiss {
   # Include specific configuration manifest
   #########################################
 
-  class{'puppet-kiss::tomcat': }
-  class{'puppet-kiss::apache': }
-  class{'puppet-kiss::logrotate': }
+  class{'kiss::tomcat': }
+  class{'kiss::apache': }
+  class{'kiss::logrotate': }
  
 }

@@ -1,4 +1,4 @@
-class puppet-kiss::logrotate inherits puppet-kiss {
+class kiss::logrotate inherits kiss {
 
   logrotate::conf { '/etc/logrotate.conf':
     rotate       => 10,
