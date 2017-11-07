@@ -1,6 +1,6 @@
 {
   "name": "kiss",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "R. Gibellini",
   "summary": "Create a service with Apache and Tomcat",
   "license": "Apache 2.0",
